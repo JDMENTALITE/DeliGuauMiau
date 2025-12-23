@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliguamiau Party | Pastelería Artesanal para Perros y Gatos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deli-blue': '#0056b3',
+                        'deli-pink': '#ff69b4',
+                        'whatsapp-green': '#25D366',
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0056b3 0%, #ff69b4 100%);
+        }
+        .floating-wa {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+        }
+        .pet-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 scroll-smooth">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <!-- Logo desde la imagen proporcionada -->
+                <div class="w-16 h-16 rounded-full border-4 border-deli-pink shadow-lg overflow-hidden">
+                    <img src="https://scontent.flim12-1.fna.fbcdn.net/v/t39.30808-6/273277648_399978375273273_8130081861324034188_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=346JEtBpsJEQ7kNvwFm1xP5&_nc_oc=AdnxNphRUfTnkQvPerfiTpaGm4H6AwgYMtOzzcAA423naSaBsm95Injpd3C_QWtJ1LM&_nc_zt=23&_nc_ht=scontent.flim12-1.fna&_nc_gid=p_-0bXSVTZypOw5c7c4yug&oh=00_AflJofTGPxWvtmrKQQHhcNXNryz7bSo8-L_cV0Xk0Z_Plw&oe=69508F8D" alt="Deliguamiau Logo" class="w-full h-full object-cover">
+                </div>
+                <div class="leading-none">
+                    <span class="font-bold text-xl text-deli-blue block">Deliguamiau</span>
+                    <span class="font-bold text-xl text-deli-pink">Party</span>
+                </div>
+            </div>
+            
+            <ul class="hidden md:flex gap-8 font-semibold text-deli-blue uppercase text-sm tracking-wider">
+                <li><a href="#inicio" class="hover:text-deli-pink transition">Inicio</a></li>
+                <li><a href="#productos" class="hover:text-deli-pink transition">Menú Mascotas</a></li>
+                <li><a href="#galeria" class="hover:text-deli-pink transition">Galería</a></li>
+                <li><a href="#contacto" class="hover:text-deli-pink transition">Ubicación</a></li>
+            </ul>
+
+            <a href="https://wa.me/51964634353" target="_blank" class="bg-whatsapp-green text-white px-5 py-2 rounded-full font-bold hover:bg-green-600 transition shadow-md flex items-center gap-2">
+                <i class="fab fa-whatsapp"></i> <span class="hidden sm:inline">Pide por WA</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-16 md:py-28 px-4 relative overflow-hidden">
+        <div class="container mx-auto flex flex-col items-center text-center relative z-10">
+            <div class="pet-badge px-4 py-2 rounded-full mb-6 flex items-center gap-3">
+                <i class="fas fa-dog"></i>
+                <span class="font-bold uppercase tracking-widest text-sm">Pastelería para Perros y Gatos</span>
+                <i class="fas fa-cat"></i>
+            </div>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight max-w-4xl drop-shadow-lg">
+                Cada año a su lado es un motivo para celebrar 🐾🎂
+            </h1>
+            <p class="text-xl md:text-3xl mb-12 max-w-3xl font-medium opacity-95">
+                Pastelería artesanal y fiestas personalizadas para tus mejores amigos en <span class="underline decoration-deli-pink">Barranca</span>.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+                <a href="https://wa.me/51964634353" target="_blank" class="bg-white text-deli-blue hover:bg-slate-100 text-xl font-bold px-10 py-5 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center gap-3">
+                    <i class="fas fa-shopping-cart"></i> Haz tu pedido aquí
+                </a>
+                <div class="flex items-center justify-center gap-2 text-white font-bold text-lg">
+                    <i class="fas fa-check-circle text-yellow-300"></i> 100% Ingredientes naturales
+                </div>
+            </div>
+        </div>
+        <!-- Decoración flotante -->
+        <div class="absolute top-1/4 -right-10 opacity-20 transform rotate-12 pointer-events-none">
+            <i class="fas fa-bone text-[12rem]"></i>
+        </div>
+    </section>
+
+    <!-- Sección 'Nuestros Productos para Mascotas' -->
+    <section id="productos" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-deli-blue mb-4 uppercase">Menú para Consentirlos</h2>
+                <div class="w-24 h-2 bg-deli-pink mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-500 text-xl italic">Porque ellos también merecen una fiesta deliciosa y saludable.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Tortas -->
+                <div class="product-card group bg-slate-50 rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 transition-all hover:-translate-y-3">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://scontent.flim12-1.fna.fbcdn.net/v/t51.75761-15/503562157_18058359899465618_2140661768024244970_n.webp?stp=dst-jpg_tt6&_nc_cat=104&_nc_cb=99be929b-f3b7c874&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF6dxipNJ1VNNyWzDigVHZhz9SEJPqVOGfP1IQk-pU4Zw9cUOqt1wNm4yzzLftVPPxo6rmIb_R6gfVzgw_JQxSQ&_nc_ohc=05m7fNDewKUQ7kNvwEhOLdk&_nc_oc=AdlAAEKerSCJRVD8zuMe1PY8HaMPG7A3P9AmGxzYtxEy5Ifh9VVCowrYNsTCdgbPHD0&_nc_zt=23&_nc_ht=scontent.flim12-1.fna&_nc_gid=4V4Ozz2iaWFcUjaudXwudQ&oh=00_AfliheCTUgPRSiRxV4wyWE2fAaL0UL6llmCws0o1cOePcw&oe=69509F31" alt="Torta para perro" class="product-img w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 bg-deli-pink text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
+                            Perros & Gatos
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-deli-blue mb-3">Tortas Temáticas</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Pasteles artesanales en forma de hueso o huella. Decorados con ingredientes aptos para su sistema digestivo.</p>
+                        <div class="flex items-center gap-2 text-deli-pink font-bold">
+                            <i class="fas fa-star"></i> El favorito de Barranca
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Snacks -->
+                <div class="product-card group bg-slate-50 rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 transition-all hover:-translate-y-3">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://scontent.flim10-1.fna.fbcdn.net/v/t39.30808-6/491685175_1251351176802651_3872400595032987734_n.jpg?_nc_cat=102&_nc_cb=99be929b-f3b7c874&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEXdbJgr0OmWE2VMeVOBw-u3OlbJiaSyxrc6VsmJpLLGi2h4AIw4f57dj-lvJGy-ARPqw5uxFpDdKpvdn1oI9xV&_nc_ohc=77MwxE4MlRwQ7kNvwFwy5qi&_nc_oc=AdmZfxdRKJXKKAp34OwWfIqNDccSDtmsDZbt-16T1dY-TVh5HNLNfCHbkzAVpWmr5UI&_nc_zt=23&_nc_ht=scontent.flim10-1.fna&_nc_gid=_5sOiofrZvq35MjbcidXug&oh=00_AfmD3eW02Low3NOjWqwaaPzOijBVNZz69ll7hUiClnl2Fg&oe=6950ACC6" alt="Premios para mascotas" class="product-img w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 bg-deli-blue text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
+                            Snacks Naturales
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-deli-pink mb-3">Snacks Saludables</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Galletitas de avena, hígado y pollo. Sin harinas refinadas ni conservantes químicos. ¡Puro amor!</p>
+                        <div class="flex items-center gap-2 text-deli-blue font-bold">
+                            <i class="fas fa-leaf"></i> 100% Orgánico
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cenas -->
+                <div class="product-card group bg-slate-50 rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 transition-all hover:-translate-y-3">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://scontent.flim12-1.fna.fbcdn.net/v/t39.30808-6/602385219_1470315564906210_5603006975381037152_n.jpg?_nc_cat=111&_nc_cb=99be929b-f3b7c874&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHOcr1tDqnd9EkPzYd5xk62g2b89A5ZramDZvz0DlmtqVHdbEpLYvzKdFlLgN2SqiBNFTmmm9j3j15yLBAvyLl0&_nc_ohc=Ap3O5tEwaMcQ7kNvwGNgwHz&_nc_oc=AdnsS4frH3eU9gLpqBr32sYDlv3rFxkUsifG6egVpLyVeWxg3A06VcCvKfo2wM0BUZU&_nc_zt=23&_nc_ht=scontent.flim12-1.fna&_nc_gid=Pk_MwrmAKpFyxm5CiFJKBQ&oh=00_AflAQpNuZCRPfvBvPaICKNPBr6bufTojkK3Dw6kKP1M4_A&oe=6950B6E5" alt="Cena para mascotas" class="product-img w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 font-bold px-4 py-2 rounded-2xl shadow-lg">
+                            Solo S/ 20
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-3">Cenas Especiales</h3>
+                        <p class="text-gray-600 mb-4 font-medium">Incluye:</p>
+                        <ul class="text-gray-600 mb-6 space-y-2">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Rolls de carne de primera</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Gelatina de pollo natural</li>
+                        </ul>
+                        <div class="bg-blue-100 text-blue-800 p-3 rounded-xl text-center font-bold text-sm">
+                            ¡Ideal para el Menú Navideño!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Celebratigres -->
+    <section id="galeria" class="py-24 bg-deli-blue text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Galería de Celebratigres</h2>
+                    <p class="text-xl opacity-80">Mira a nuestros cumpleañeros más felices de la semana.</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="bg-white/10 p-4 rounded-2xl text-center">
+                        <p class="text-3xl font-bold">500+</p>
+                        <p class="text-xs uppercase">Tortas Entregadas</p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-2xl text-center">
+                        <p class="text-3xl font-bold">100%</p>
+                        <p class="text-xs uppercase">Pet Friendly</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Foto 1 -->
+                <div class="relative group rounded-3xl overflow-hidden aspect-square shadow-2xl border-4 border-white/20">
+                    <img src="https://scontent.flim12-1.fna.fbcdn.net/v/t51.75761-15/499079697_18058330472465618_1893658827827298661_n.webp?stp=dst-jpg_tt6&_nc_cat=105&_nc_cb=99be929b-f3b7c874&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFjWsIuEQdGrdntsZI_5Jf8lU3g7jMFyFSVTeDuMwXIVFII_VhTG5l9_eU0FcAqD9d0cUy3qEW159NXNRzjwe9v&_nc_ohc=FLEGpkrNm1oQ7kNvwFg9Ump&_nc_oc=Adm5vMZwGuNLxmmBEA5yZDqwUvO648AJcEAubbnPSzkDM7epcFRhAhLZ4NdD02lIOb4&_nc_zt=23&_nc_ht=scontent.flim12-1.fna&_nc_gid=kTRdOfci6n4XOW_orkUTFw&oh=00_AfkyfW20NUkTQpKltvYpVfxIPCIwopjcj3CB9-48dT7I8g&oe=6950B747" alt="Gaia" class="w-full h-full object-cover transition-transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                        <p class="font-bold text-2xl">Gaia (13 años)</p>
+                        <p class="text-sm opacity-80 italic">La reina de la fiesta</p>
+                    </div>
+                </div>
+                <!-- Foto 2 -->
+                <div class="relative group rounded-3xl overflow-hidden aspect-square shadow-2xl border-4 border-white/20">
+                    <img src="https://scontent.flim10-1.fna.fbcdn.net/v/t51.82787-15/540528840_18064799819465618_2821698667796820657_n.webp?stp=dst-jpg_tt6&_nc_cat=106&_nc_cb=99be929b-f3b7c874&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF1d1Wze8XAa5YKiRryfNQGYcg5WPYFZJdhyDlY9gVklxbRvdzMTMrwY-fgDkX9zs__SUu1WtfBQ5Gx_7ej4sMT&_nc_ohc=Ko9506pFLiAQ7kNvwEog59D&_nc_oc=AdnSgORcEuPaKqyHzzOpCwZk1KNswqaWPBZqRDJL83dlGq_JOve3u7zKSRK8n643q2A&_nc_zt=23&_nc_ht=scontent.flim10-1.fna&_nc_gid=Ycny77UikcVAXT7Aa3T5vw&oh=00_Afncw4aRBzL0M6bD25lX6fBWhrzaNBeXWVrXMe_UwDZzmQ&oe=6950C447" alt="Balu" class="w-full h-full object-cover transition-transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                        <p class="font-bold text-2xl">Balu (1 año)</p>
+                        <p class="text-sm opacity-80 italic">Su primer añito</p>
+                    </div>
+                </div>
+                <!-- Foto 3 (Reutilizada para llenar) -->
+                <div class="relative group rounded-3xl overflow-hidden aspect-square shadow-2xl border-4 border-white/20 hidden md:block">
+                    <img src="1001512981.jpg" alt="Detalle" class="w-full h-full object-cover transition-transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-deli-pink/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-paw text-6xl"></i>
+                    </div>
+                </div>
+                <!-- Foto 4 (Reutilizada para llenar) -->
+                <div class="relative group rounded-3xl overflow-hidden aspect-square shadow-2xl border-4 border-white/20 hidden md:block">
+                    <img src="1001512987.jpg" alt="Cena" class="w-full h-full object-cover transition-transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-deli-blue/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-birthday-cake text-6xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación y Redes -->
+    <section id="contacto" class="py-24 bg-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-20">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-deli-blue mb-8 leading-tight">
+                    ¡Orgullosamente en <span class="text-deli-pink">Barranca</span>!
+                </h2>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+                    Llevamos la fiesta directamente a tu hogar. Especialistas en hacer que el día de tu perro o gato sea inolvidable con pastelería artesanal de alta calidad.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center gap-6 bg-slate-50 p-6 rounded-3xl border-l-8 border-deli-blue">
+                        <i class="fas fa-truck text-3xl text-deli-blue"></i>
+                        <div>
+                            <p class="font-bold text-lg">Delivery en todo Barranca</p>
+                            <p class="text-gray-500 italic">Programamos tu pedido para que llegue fresco.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 bg-slate-50 p-6 rounded-3xl border-l-8 border-deli-pink">
+                        <i class="fab fa-facebook text-3xl text-deli-pink"></i>
+                        <div>
+                            <p class="font-bold text-lg">Síguenos</p>
+                            <a href="https://www.facebook.com/deliguaumiau" target="_blank" class="text-blue-600 hover:underline">facebook.com/deliguaumiau</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 w-full text-center">
+                <div class="relative inline-block">
+                    <img src="https://scontent.flim12-1.fna.fbcdn.net/v/t39.30808-6/273277648_399978375273273_8130081861324034188_n.jpg?_nc_cat=107&_nc_cb=99be929b-f3b7c874&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHYnD3Kpjypa584soA7sE1ySJybPF6Ka8NInJs8Xoprw-5YR2d3zXiinOnp8Ownx7B8rfQxkZ7cUE1wRZRHEi7O&_nc_ohc=346JEtBpsJEQ7kNvwEcYEj5&_nc_oc=AdkpVArZ_C4aFk18gjawbZDSwN_jDPiUunWf8nrfq2wHxKPe5Kg-CA-9gyzhddzhO0U&_nc_zt=23&_nc_ht=scontent.flim12-1.fna&_nc_gid=wOo02CuqG6S1t96Iwwq-FA&oh=00_Afnq_bbXrhXnCGATrkwJf8bWYZBkM3DSDXyEP5cAHTBr8g&oe=6950C7CD" alt="Logo grande" class="w-80 h-80 md:w-[500px] md:h-[500px] object-cover rounded-full border-[15px] border-slate-100 shadow-2xl mx-auto transition-transform hover:rotate-3">
+                    <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-deli-pink text-white px-8 py-3 rounded-full font-bold text-xl shadow-xl whitespace-nowrap">
+                        🐾 Hecho con amor en Barranca
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col items-center gap-4 mb-8">
+                <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white">
+                    <img src="https://scontent.flim12-1.fna.fbcdn.net/v/t39.30808-6/273277648_399978375273273_8130081861324034188_n.jpg?_nc_cat=107&_nc_cb=99be929b-f3b7c874&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHYnD3Kpjypa584soA7sE1ySJybPF6Ka8NInJs8Xoprw-5YR2d3zXiinOnp8Ownx7B8rfQxkZ7cUE1wRZRHEi7O&_nc_ohc=346JEtBpsJEQ7kNvwEcYEj5&_nc_oc=AdkpVArZ_C4aFk18gjawbZDSwN_jDPiUunWf8nrfq2wHxKPe5Kg-CA-9gyzhddzhO0U&_nc_zt=23&_nc_ht=scontent.flim12-1.fna&_nc_gid=wOo02CuqG6S1t96Iwwq-FA&oh=00_Afnq_bbXrhXnCGATrkwJf8bWYZBkM3DSDXyEP5cAHTBr8g&oe=6950C7CD" alt="Footer Logo" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-3xl font-bold tracking-tighter">Deliguamiau Party</h3>
+                <p class="text-gray-400 max-w-md mx-auto">La primera pastelería artesanal especializada en mascotas de Barranca. Salud y sabor en cada bocado.</p>
+            </div>
+            
+            <div class="flex justify-center gap-10 mb-12 text-3xl">
+                <a href="https://www.facebook.com/deliguaumiau" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/51964634353" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="pt-8 border-t border-white/10">
+                <p class="text-sm text-gray-500">© 2024 Deliguamiau Party - Barranca, Lima. Especialistas en Perros y Gatos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/51964634353" target="_blank" class="floating-wa fixed bottom-8 right-8 z-[70] bg-whatsapp-green text-white w-20 h-20 rounded-full flex items-center justify-center text-4xl shadow-2xl hover:scale-110 transition-transform">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
+
